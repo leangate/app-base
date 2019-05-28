@@ -1,0 +1,14 @@
+version: '2'
+
+services:
+    x:
+        build: .
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+            - x_data:/data
+        restart: always
+        ports:
+            - 80:10000
+
+volumes:
+    x_data: {}
