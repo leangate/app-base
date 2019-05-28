@@ -1,14 +1,41 @@
 version: '2'
 
 services:
-    x:
-        build: .
+    terminal:
+        image: leangate/app-base
         volumes:
             - /etc/localtime:/etc/localtime:ro
             - x_data:/data
-        restart: always
         ports:
-            - 80:10000
+            - 10001:10000
+    firefox:
+        image: leangate/firefox-app
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+            - x_data:/data
+        ports:
+            - 10002:10000
+    chrome:
+        image: leangate/chrome-app
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+            - x_data:/data
+        ports:
+            - 10003:10000
+    emacs:
+        image: leangate/emacs-app
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+            - x_data:/data
+        ports:
+            - 10004:10000
+    nautilus:
+        image: leangate/nautilus-app
+        volumes:
+            - /etc/localtime:/etc/localtime:ro
+            - x_data:/data
+        ports:
+            - 10005:10000
 
 volumes:
     x_data: {}
