@@ -16,10 +16,10 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y curl && \
 ADD infinityTerm.sh /usr/local/bin/infinityTerm
 RUN chmod 777 /usr/local/bin/infinityTerm
 
-# non-root user for future
+# non-root user
 RUN adduser --disabled-password --gecos "noname" --uid 1000 noname
 
-# switch to user in future
+# switch to user
 USER noname
 
 ENV DISPLAY=:100
