@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y gnupg2
 RUN DEBIAN_FRONTEND=noninteractive apt-get install -y curl && \
     curl https://winswitch.org/gpg.asc | apt-key add - && \
     echo "deb http://winswitch.org/ bionic main" > /etc/apt/sources.list.d/xpra.list && \
-    apt-get install -y software-properties-common && \
+    apt-get install -y software-properties-common x11-apps && \
     add-apt-repository universe && \
     apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y xpra xvfb xterm && \
