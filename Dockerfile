@@ -1,7 +1,7 @@
 FROM ubuntu:bionic
 
 RUN apt-get upgrade -y
-RUN apt-get update && apt-get install -y gnupg2
+RUN apt-get update && apt-get install -y gnupg2 apt-utils
 RUN apt-get install -y wget curl git
 
 # install xpra
