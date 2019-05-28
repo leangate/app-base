@@ -17,16 +17,10 @@ ADD infinityTerm.sh /usr/local/bin/infinityTerm
 RUN chmod 777 /usr/local/bin/infinityTerm
 
 # non-root user for future
-RUN adduser --disabled-password --gecos "User" --uid 1000 user
-
-# x apps installation
-RUN apt-get update && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y firefox xclock xreader xviewer xed xplayer pix && \
-    apt-get clean && \ 
-    rm -rf /var/lib/apt/lists/*
+RUN adduser --disabled-password --gecos "noname" --uid 1000 noname
 
 # switch to user in future
-USER root
+USER noname
 
 ENV DISPLAY=:100
 
