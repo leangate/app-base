@@ -1,4 +1,4 @@
 # app-base
 LeanGate standalone app base image
 
-Icon by Pixelmeetup
+[Icon](https://www.flaticon.com/free-icon/coding_1628197) by Pixelmeetup
